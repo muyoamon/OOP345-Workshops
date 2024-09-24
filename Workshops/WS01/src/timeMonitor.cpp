@@ -1,3 +1,7 @@
+// name: Thanatorn Wongthanaporn
+// id: 161197223
+// email: twongthanaporn@myseneca.ca 
+// date: 24/09/2024
 #include "timeMonitor.h"
 #include "event.h"
 #include <chrono>
