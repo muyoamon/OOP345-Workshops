@@ -1,3 +1,7 @@
+// name: Thanatorn Wongthanaporn
+// id: 161197223
+// email: twongthanaporn@myseneca.ca 
+// date: 1/10/2024
 #include "team.h"
 #include "character.h"
 #include <iomanip>
