@@ -93,6 +93,10 @@ void CustomerOrder::fillItem(Station &station, std::ostream &os) {
   for (size_t i = 0; i < m_cntItem; i++) {
     if (!m_lstItem[i]->m_isFilled && m_lstItem[i]->m_itemName == station.getItemName()) {
       itemPtr = m_lstItem[i];
+      if (station.getQuantity() == 0) {
+        os << "    Unable to fill " << this->m_name << ", " << this->m_product << " [" << itemPtr->m_itemName << "]\n";
+        continue;;
+      }
       break;
     }
   }
@@ -104,7 +108,7 @@ void CustomerOrder::fillItem(Station &station, std::ostream &os) {
       os << "    Filled " << this->m_name << ", " << this->m_product << " [" << itemPtr->m_itemName << "]\n";
     } else {
       
-      os << "    Unable to fill " << this->m_name << ", " << this->m_product << " [" << itemPtr->m_itemName << "]\n";
+      //os << "    Unable to fill " << this->m_name << ", " << this->m_product << " [" << itemPtr->m_itemName << "]\n";
     }
   }
 }
